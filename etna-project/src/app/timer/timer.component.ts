@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ScoreService } from '../services/score/score.service';
+import { ScoreService } from '../../services/score/score.service';
 
 @Component({
   selector: 'app-timer',

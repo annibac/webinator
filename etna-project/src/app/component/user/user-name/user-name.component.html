@@ -1,0 +1,9 @@
+<p>
+  user-name works!
+</p>
+
+<input required [(ngModel)]="name" #ctrl="ngModel"/>
+<div *ngIf="ctrl.invalid">
+    Name is required.
+</div>
+<button [disabled]="ctrl.invalid" (click)="addName(ctrl.value)">Valider le nom</button>
