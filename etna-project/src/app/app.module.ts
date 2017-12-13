@@ -16,6 +16,7 @@ import { UserComponent } from './component/user/user.component';
 import { UserNameComponent } from './component/user/user-name/user-name.component';
 import { UserSexComponent } from './component/user/user-sex/user-sex.component';
 import { GameComponent } from './component/game/game.component';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GameComponent } from './component/game/game.component';
     UserComponent,
     UserNameComponent,
     UserSexComponent,
-    GameComponent
+    GameComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
