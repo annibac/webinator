@@ -17,6 +17,9 @@ import { UserNameComponent } from './component/user/user-name/user-name.componen
 import { UserSexComponent } from './component/user/user-sex/user-sex.component';
 import { GameComponent } from './component/game/game.component';
 import { HomeComponent } from './component/home/home.component';
+import { ShopComponent } from './component/shop/shop.component';
+import { ProjectsComponent } from './component/projects/projects.component';
+import { ActivityComponent } from './component/activity/activity.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { HomeComponent } from './component/home/home.component';
     UserNameComponent,
     UserSexComponent,
     GameComponent,
-    HomeComponent
+    HomeComponent,
+    ShopComponent,
+    ProjectsComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
