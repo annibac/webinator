@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './component/user/user.component';
 import { GameComponent } from './component/game/game.component';
+import { HomeComponent } from './component/home/home.component';
 
 import { AuthGuard } from './guard/auth/auth.guard';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
 //  { path: 'heroes', component: HeroesComponent }
   { path: '', redirectTo: '/user', pathMatch: 'full' },
   { path: 'user', component: UserComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'game', canActivate: [AuthGuard], component: GameComponent },
 ];
 
