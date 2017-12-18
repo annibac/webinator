@@ -15,8 +15,8 @@ const routes: Routes = [
 //  { path: 'heroes', component: HeroesComponent }
   { path: '', redirectTo: '/user', pathMatch: 'full' },
   { path: 'user', component: UserComponent },
-  { path: 'home', canActivate: [AuthGuard], component: HomeComponent },
-  { path: 'game', canActivate: [AuthGuard], component: GameComponent },
+  { path: 'home'/*, canActivate: [AuthGuard]*/, component: HomeComponent },
+  { path: 'game'/*, canActivate: [AuthGuard]*/, component: GameComponent },
 ];
 
 @NgModule({

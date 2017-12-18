@@ -5,8 +5,11 @@ export class UserService {
 
   private _name: string;
   private _sex: string;
+  private _nbProjectsAtSameTime: number;
 
-  constructor() { }
+  constructor() {
+    this._nbProjectsAtSameTime = 3;
+  }
 
   set name(name: string) {
     this._name = name;
@@ -22,5 +25,13 @@ export class UserService {
 
   get sex(): string {
     return this._sex;
+  }
+
+  set nbProjectsAtSameTime(nbProjectsAtSameTime: number) {
+    this._nbProjectsAtSameTime = nbProjectsAtSameTime;
+  }
+
+  get nbProjectsAtSameTime(): number {
+    return this._nbProjectsAtSameTime;
   }
 }
