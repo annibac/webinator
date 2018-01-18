@@ -1,0 +1,10 @@
+<div class="callout callout-success" role="alert">
+	<h5>FDI-DEVC</h5>
+	<p>
+		{{ project.name }}
+		<br>
+		<small>Temps: {{project.difficulty}}s</small>
+	</p>
+	<p *ngIf="isStarted"><ngb-progressbar showValue="true" type="success" [value]="currentTime" [max]="maxTime" [showValue]="false"><b>{{ maxTime - currentTime > 0 ? (maxTime - currentTime | number:'0.0-0') : 'Terminé' }}s</b></ngb-progressbar></p>
+	<button (click)="beginProject($event)" *ngIf="!isStarted" class="btn btn-w-md btn-outline btn-danger">Commencer</button>
+</div>

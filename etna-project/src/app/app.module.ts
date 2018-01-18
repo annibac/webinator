@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ScoreService } from './services/score/score.service';
 import { UserService } from './services/user/user.service';
@@ -10,7 +10,9 @@ import { ProjectsService } from './services/projects/projects.service';
 import { AuthGuard } from './guard/auth/auth.guard';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 import { AppComponent } from './app.component';
 import { TimerComponent } from './component/timer/timer.component';
@@ -23,6 +25,11 @@ import { ShopComponent } from './component/shop/shop.component';
 import { ProjectsComponent } from './component/projects/projects.component';
 import { ActivityComponent } from './component/activity/activity.component';
 import { ProjectComponent } from './component/projects/project/project.component';
+import { ModalScoreComponent } from './component/projects/project/modal/modal-score/modal-score.component';
+import { ModalErrorComponent } from './component/projects/project/modal/modal-error/modal-error.component';
+import { ItemComponent } from './component/shop/item/item.component';
+import { ShopService } from './services/shop/shop.service';
+import { SkillsService } from './services/skills/skills.service';
 
 @NgModule({
   declarations: [
@@ -36,19 +43,31 @@ import { ProjectComponent } from './component/projects/project/project.component
     ShopComponent,
     ProjectsComponent,
     ActivityComponent,
-    ProjectComponent
+    ProjectComponent,
+    ModalScoreComponent,
+    ModalErrorComponent,
+    ItemComponent
+  ],
+  entryComponents: [
+    ModalScoreComponent,
+    ModalErrorComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AngularFontAwesomeModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot(),
+    SimpleNotificationsModule.forRoot(),
   ],
   providers: [
     ScoreService,
     UserService,
     AuthGuard,
     ProjectsService,
+    ShopService,
+    SkillsService,
   ],
   bootstrap: [AppComponent]
 })
