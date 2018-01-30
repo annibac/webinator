@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Project } from './project';
 
 @Injectable()
 export class ProjectsService {
 
-  private _projects = [{'name' : 'MyLib: Compléter un bibliothèque de fonctions basiques en C.', 'level': 1, 'difficulty': 15, 'language': 'C', 'score': 30},
-  {'name' : 'Rendez-vous pédagogique.', 'level': 1, 'difficulty': 30, 'language': null, 'score': 30}];
+  private _projects = [{'name' : 'MyLib: Complï¿½ter un bibliothï¿½que de fonctions basiques en C.', 'level': 1, 'difficulty': 15, 'language': 'C', 'score': 30},
+  {'name' : 'Rendez-vous pï¿½dagogique.', 'level': 1, 'difficulty': 30, 'language': null, 'score': 30}];
 
   constructor() {
+
   }
 
   get projects(): any {
@@ -16,11 +16,6 @@ export class ProjectsService {
 
   set projects(projects: any) {
     this._projects = projects;
-  }
-
-  // Add project to projects array
-  addProject(project: Project) {
-    this._projects.push(project);
   }
 
   // Remove 1 project from projects array

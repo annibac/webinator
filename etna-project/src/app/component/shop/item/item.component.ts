@@ -30,7 +30,7 @@ export class ItemComponent implements OnInit {
 
     if (buying === -1) {
       this.notificationsService.error(
-        'Erreur',
+        'Désolé',
         '<br>Vous ne pouvez pas acheter ' + this.item.name + ' :(',
         {
           timeOut: 5000,
@@ -43,7 +43,7 @@ export class ItemComponent implements OnInit {
     else {
       this.shopService.shop(this.item.target, this.item.value);
       this.notificationsService.success(
-        'F�licitations',
+        'Bien joué !',
         '<br>Vous venez d\'acheter ' + this.item.name + ' !',
         {
           timeOut: 5000,

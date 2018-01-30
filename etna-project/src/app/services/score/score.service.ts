@@ -4,10 +4,12 @@ import { Injectable } from '@angular/core';
 export class ScoreService {
   private _value: number;
   private _addingValue: number;
+  private _winningValue: number;
 
   constructor() {
-    this._value = 50;
+    this._value = 10;
     this._addingValue = 1;
+    this._winningValue = 20;
   }
 
   set value(new_value: number) {
@@ -24,6 +26,15 @@ export class ScoreService {
 
   get addingValue(): number {
     return this._addingValue;
+  }
+
+  winningCondition() {
+    if (this._value >= this._winningValue)
+      return 1;
+    else if (this._value <= 0)
+      return -1;
+    console.log(this._value);
+    return 0;
   }
 
   // Update score by 1 (used with score timer)

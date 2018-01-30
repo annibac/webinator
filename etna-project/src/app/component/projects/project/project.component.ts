@@ -40,13 +40,13 @@ export class ProjectComponent implements OnInit {
 
     if (random - this.userService.charism <= this.project.difficulty) {
       this.scoreService.add(this.project.score);
-      modalRef.componentInstance.title = 'Félicitation !';
-      modalRef.componentInstance.content = 'Tu as réussi à valider ton projet ! Ton score a augmenté de ' + this.project.score;
+      modalRef.componentInstance.title = 'FÃ©licitation !';
+      modalRef.componentInstance.content = 'Tu as rÃ©ussi Ã  valider ton projet ! Ton score a augmentÃ© de ' + this.project.score;
     }
     else {
       this.scoreService.substract(this.project.score, false);
       modalRef.componentInstance.title = 'Dommage !';
-      modalRef.componentInstance.content = 'Tu n\'as pas réussi à valider ton projet ... Ton score est réduit de ' + this.project.score + '.';
+      modalRef.componentInstance.content = 'Tu n\'as pas rÃ©ussi Ã  valider ton projet ... Ton score est rÃ©duit de ' + this.project.score + '.';
     }
     this.timer.unsubscribe();
   }

@@ -1,0 +1,9 @@
+<body class="sidebar-folded" style="background:#1572d0; height: 100%;">
+	<div class="main-content" style="height: 100%;">
+    <p *ngIf="scoreService.winningCondition() == -1" style="text-align: center; color: white; font-size: 30px;">Dommage, vous n'avez pas réussi à valider assez d'UV pour passer en année supérieur ...</p>
+    <p *ngIf="scoreService.winningCondition() == 1" style="text-align: center; color: white; font-size: 30px;">Félicitations vous êtes admis en année supérieur !</p>
+    <p style="text-align: center; color: white; font-size: 30px;">
+      Vous avez obtenus : {{ skillsService.value }} skills !
+    </p>
+  </div>
+</body>

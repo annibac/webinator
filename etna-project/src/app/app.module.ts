@@ -30,6 +30,7 @@ import { ModalErrorComponent } from './component/projects/project/modal/modal-er
 import { ItemComponent } from './component/shop/item/item.component';
 import { ShopService } from './services/shop/shop.service';
 import { SkillsService } from './services/skills/skills.service';
+import { EndComponent } from './component/end/end.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SkillsService } from './services/skills/skills.service';
     ProjectComponent,
     ModalScoreComponent,
     ModalErrorComponent,
-    ItemComponent
+    ItemComponent,
+    EndComponent
   ],
   entryComponents: [
     ModalScoreComponent,
