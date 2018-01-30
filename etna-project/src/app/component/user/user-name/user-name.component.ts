@@ -24,7 +24,7 @@ export class UserNameComponent implements OnInit {
   addName(name: string) {
     if (name) {
       this.userService.name = name;
-      this.router.navigate(['/game']);
+      this.router.navigate(['/home']);
     }
   }
 }

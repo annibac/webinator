@@ -1,3 +1,5 @@
+import { SkillsService } from '../../services/skills/skills.service';
+import { UserService } from '../../services/user/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityComponent implements OnInit {
 
-  constructor() { }
+  constructor(private skillsService: SkillsService, private userService: UserService) {}
 
   ngOnInit() {
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoreService } from '../../services/score/score.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-timer',
@@ -9,12 +10,19 @@ import { ScoreService } from '../../services/score/score.service';
 export class TimerComponent implements OnInit {
 
   score: ScoreService;
+  interval: any;
 
-  constructor(public scoreService: ScoreService) {
+  constructor(public scoreService: ScoreService, private router: Router) {
     this.score = scoreService;
 
-    setInterval(() => {
-      this.score.update();
+    this.interval = setInterval(() => {
+      if (this.score.winningCondition() != 0) {
+          clearInterval(this.interval);
+          this.router.navigate(['/end']);
+      }
+      else {
+        this.score.update()
+      }
     }, 1000);
   }
 

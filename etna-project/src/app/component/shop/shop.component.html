@@ -2,20 +2,6 @@
 	<h4 class="card-title">Magasin</h4>
 	
 	<div class="card-body">
-		<div class="callout callout-danger" role="alert">
-			<h5>Robin</h5>
-			<p>Avec Robin à vos côtés, vos skills en PHP augmentent de 5.</p>
-			<button class="btn btn-w-md btn-outline btn-danger">Acheter</button>
-		</div>
-		<div class="callout callout-danger" role="alert">
-			<h5>Microphone</h5>
-			<p>Votre compétence 'charisme' augmente de 10.</p>
-			<button class="btn btn-w-md btn-outline btn-danger">Acheter</button>
-		</div>
-		<div class="callout callout-danger" role="alert">
-			<h5>Liasse de billets</h5>
-			<p>Complète instanément un projet en cours.</p>
-			<button class="btn btn-w-md btn-outline btn-danger">Acheter</button>
-		</div>
+		<app-shop-item *ngFor="let item of items;let i = index" [index]="i"></app-shop-item>
 	</div>
 </div>

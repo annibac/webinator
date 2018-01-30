@@ -1,40 +1,9 @@
 <div class="card">
 	<h4 class="card-title">Projets</h4>
-
 	<div class="card-body">
-		<div class="callout callout-success" role="alert">
-			<h5>FDI-DEVC</h5>
-			<p>
-				MyLib : Compléter un bibliothèque de fonctions basiques en C.
-				<br>
-				<small>Temps: 35s</small>
-			</p>
-		</div>
-
-		<div class="callout callout-info" role="alert">
-			<h5>Mêlée</h5>
-			<p>
-				Rendez-vous pédagogique.
-				<br>
-				<small>Temps: 5s</small>
-			</p>
-		</div>
-
-		<div class="callout callout-success" role="alert">
-			<h5>FDI-UNI1</h5>
-			<p>
-				Apache1 : Installation et utilisation primaire d'Apache.
-				<br>
-				<small>Temps: 30s</small>
-			</p>
-		</div>
-		<div class="callout callout-warning" role="alert">
-			<h5>SDC-WEB</h5>
-			<p>
-				CodeCamp WEB : Améliorez vos compétences en web en répondant au défi d'une entreprise !
-				<br>
-				<small>Temps: 60s</small>
-			</p>
-		</div>
+		<app-project *ngFor="let project of projects;let i = index" [index]="i"></app-project>
+	</div>
+	<div *ngIf="projects.length == 0">
+		<p>Aucuns projets</p>
 	</div>
 </div>
